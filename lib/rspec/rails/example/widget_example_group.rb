@@ -43,6 +43,8 @@ module RSpec::Rails
     end
 
     included do
+      metadata[:type] = :cell
+
       before do
         setup # defined in Apotomo::TestCase.
         @routes = ::Rails.application.routes
