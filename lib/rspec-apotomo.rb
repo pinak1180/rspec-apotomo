@@ -10,7 +10,7 @@ module RSpec
       initializer 'apotomo.rspec' do
         require 'rspec/rails/example/widget_example_group'
         RSpec.configure do |c|
-          c.include RSpec::Rails::WidgetExampleGroup, :example_group => { :file_path => /spec\/widgets/}
+          c.include RSpec::Rails::WidgetExampleGroup, :example_group => { :file_path => /spec\/widgets/,:type => :widget}
         end
 
         unless defined?(Capybara) || defined?(Webrat)
